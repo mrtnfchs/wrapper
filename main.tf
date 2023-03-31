@@ -1,6 +1,6 @@
 module "vpc" {
-  #source  = "github.com/mrtnfchs/vpc"
-  source = "../vpc/"
+  source  = "github.com/mrtnfchs/vpc"
+  #source = "../vpc/"
 
   count = var.create_vpc ? 1 : 0
 
@@ -11,8 +11,8 @@ module "vpc" {
 }
 
 module "ec2" {
-  #source  = "github.com/mrtnfchs/ec2"
-  source = "../ec2/"
+  source  = "github.com/mrtnfchs/ec2"
+  #source = "../ec2/"
 
   count = var.create_ec2 ? 1 : 0
 
